@@ -1,0 +1,148 @@
+.navContainer {
+  width: 100%;
+  height: 50px;
+  background-color: white;
+  box-shadow: rgb(41 41 41 / 6%) 0px 2px 4px;
+  margin-bottom: 10px;
+  position: sticky;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#navlogo {
+  width: 10%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px dashed #888;
+}
+
+#linkdiv1 {
+  font-size: 15px;
+  font-family: "Public Sans", sans-serif;
+  /* color: white; */
+  text-decoration: none;
+}
+
+#navList {
+  display: flex;
+  list-style: none;
+  width: 500px;
+  height: 90%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#navList li {
+  width: 25%;
+  height: 100%;
+  margin: 0px 1px;
+  background-color: rgb(36, 35, 35);
+  cursor: pointer;
+  border-radius: 3px;
+}
+
+#linkdiv {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  font-size: 15px;
+  font-family: "Public Sans", sans-serif;
+  color: white;
+  width: 100%;
+  height: 100%;
+}
+
+#navList li:hover {
+  background-color: rgba(0, 68, 255, 0.623);
+}
+
+#navList1 {
+  display: flex;
+  list-style: none;
+  width: 200px;
+  height: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#navList1 li {
+  width: 50%;
+  height: 100%;
+  margin: 0px 1px;
+  font-size: 15px;
+  font-family: "Public Sans", sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  color: gray;
+  border-left: 1px solid rgba(128, 128, 128, 0.301);
+  cursor: pointer;
+}
+
+#navList1 li:hover {
+  box-shadow: rgb(41 41 41 / 9%) 0px 2px 4px;
+}
+
+.menubar {
+  /* background-color: blue; */
+  display: none;
+}
+
+#menubarIcon {
+  font-size: 25px;
+}
+
+@media screen and (max-width: 800px) {
+  .menubar {
+    height: 100%;
+    width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  #icon {
+    display: none;
+  }
+
+  #navList {
+    visibility: hidden;
+  }
+
+  #navListCollapse {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    list-style: none;
+    width: 100%;
+    height: 90%;
+    background-color: aqua;
+    position: absolute;
+    top: 50px;
+  }
+
+  #navListCollapse li {
+    width: 100%;
+    padding: 10px 0px;
+    border-bottom: 1px solid rgba(245, 245, 245, 0.596);
+    margin: 0px;
+    background-color: rgb(36, 35, 35);
+    cursor: pointer;
+    border-radius: 0px;
+  }
+
+  #navList1 {
+    visibility: hidden;
+    display: flex;
+    list-style: none;
+    width: 0px;
+    height: 100%;
+    justify-content: space-between;
+    align-items: center;
+  }
+}

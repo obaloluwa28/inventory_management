@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./addinventory.css";
 import Axios from "axios";
+import Navbar from "../Components/Navbar/Navbar";
 
 const Addinventory = () => {
   const [barcode, SetBarcode] = useState("");
@@ -10,12 +11,12 @@ const Addinventory = () => {
   const [costprice, SetCostprice] = useState(0);
   const [sellprice, SetSellprice] = useState(0);
   const [seller, SetSeller] = useState("");
-  const [data, setData] = useState([]);
+  const [productList, setProductList] = useState([]);
 
   useEffect(() => {
-    Axios.get("http://localhost:5000/getproduct").then((res) => {
-      console.log(res);
-    });
+    Axios.get("http://localhost:5000/getproduct").then((res) =>
+      setProductList(res.data)
+    );
   }, []);
 
   const SubmitButton = (e) => {
@@ -70,6 +71,7 @@ const Addinventory = () => {
 
   return (
     <div className="container">
+      <Navbar />
       <form onSubmit={onsubmit}>
         <div className="Topfield">
           <div className="fieldarea">
@@ -166,8 +168,12 @@ const Addinventory = () => {
       <div className="tablearea">
         <div className="tableheading">
           <h5>Current Stock</h5>
+          <span className="searchbar">
+            <p>Search:</p>
+            <input id="searchbox" />
+          </span>
         </div>
-        <div className="producttab">
+        <table className="producttab">
           <thead id="thead">
             <th id="tcell">Barcode</th>
             <th id="tcell">Product Name</th>
@@ -178,21 +184,21 @@ const Addinventory = () => {
             <th id="tcell">Supplier</th>
             <th id="tcell">Status</th>
           </thead>
-          <tbody>
-            {data.map((itemm) => (
-              <tr>
-                <td id="tbcell">{itemm.barCode}</td>
-                <td id="tbcell">{itemm.prodname}</td>
-                <td id="tbcell">{itemm.category}</td>
-                <td id="tbcell">{itemm.quant}</td>
-                <td id="tbcell">{itemm.costpri}</td>
-                <td id="tbcell">{itemm.sellpri}</td>
-                <td id="tbcell">{itemm.supplier}</td>
-                <td id="tbcell">{itemm.status}</td>
+          <tbody id="tbody">
+            {productList.map((itemm) => (
+              <tr id="trow">
+                <td id="tbcell">{itemm.Barcode}</td>
+                <td id="tbcell">{itemm.ProdName}</td>
+                <td id="tbcell">{itemm.Categories}</td>
+                <td id="tbcell">{itemm.Quantity}</td>
+                <td id="tbcell">{itemm.Costprice}</td>
+                <td id="tbcell">{itemm.SellingPrice}</td>
+                <td id="tbcell">{itemm.Seller}</td>
+                <td id="tbcell">{itemm.Status}</td>
               </tr>
             ))}
           </tbody>
-        </div>
+        </table>
       </div>
     </div>
   );
