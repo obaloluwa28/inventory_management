@@ -72,133 +72,135 @@ const Addinventory = () => {
   return (
     <div className="container">
       <Navbar />
-      <form onSubmit={onsubmit}>
-        <div className="Topfield">
-          <div className="fieldarea">
-            <label id="labelfield">Barcode: </label>
-            <input
-              id="inputfield"
-              placeholder="Barcode"
-              type="text"
-              name="barcode"
-              onChange={handleonchange}
-            />
-          </div>
+      <div className="container-body">
+        <form onSubmit={onsubmit}>
+          <div className="Topfield">
+            <div className="fieldarea">
+              <label id="labelfield">Barcode: </label>
+              <input
+                id="inputfield"
+                placeholder="Barcode"
+                type="text"
+                name="barcode"
+                onChange={handleonchange}
+              />
+            </div>
 
-          <div className="fieldarea">
-            <label id="labelfield">Product Name: </label>
-            <input
-              id="inputfield"
-              placeholder="Product Name"
-              type="text"
-              name="ProdName"
-              onChange={handleonchange}
-            />
-          </div>
+            <div className="fieldarea">
+              <label id="labelfield">Product Name: </label>
+              <input
+                id="inputfield"
+                placeholder="Product Name"
+                type="text"
+                name="ProdName"
+                onChange={handleonchange}
+              />
+            </div>
 
-          <div className="fieldarea">
-            <label id="labelfield">Category: </label>
-            <select
-              id="inputfield"
-              onChange={handleonchange}
-              name="lvl"
-              // value={level}
-            >
-              <option disabled selected="true" value="">
-                ---Select Category---
-              </option>
-              <option value="100">Soda Drinks</option>
-              <option value="200">Wine</option>
-              <option value="300">Confectionery</option>
-              <option value="400">Bread</option>
-              <option value="500">Nuts</option>
-            </select>
-          </div>
+            <div className="fieldarea">
+              <label id="labelfield">Category: </label>
+              <select
+                id="inputfield"
+                onChange={handleonchange}
+                name="lvl"
+                // value={level}
+              >
+                <option disabled selected="true" value="">
+                  ---Select Category---
+                </option>
+                <option value="100">Soda Drinks</option>
+                <option value="200">Wine</option>
+                <option value="300">Confectionery</option>
+                <option value="400">Bread</option>
+                <option value="500">Nuts</option>
+              </select>
+            </div>
 
-          <div className="fieldarea">
-            <label id="labelfield">Quantity: </label>
-            <input
-              id="inputfield"
-              placeholder="Quantity"
-              type="number"
-              name="quantity"
-              onChange={handleonchange}
-            />
-          </div>
+            <div className="fieldarea">
+              <label id="labelfield">Quantity: </label>
+              <input
+                id="inputfield"
+                placeholder="Quantity"
+                type="number"
+                name="quantity"
+                onChange={handleonchange}
+              />
+            </div>
 
-          <div className="fieldarea">
-            <label id="labelfield">Cost Price: </label>
-            <input
-              id="inputfield"
-              placeholder="Cost Price"
-              type="number"
-              name="cp"
-              onChange={handleonchange}
-            />
-          </div>
+            <div className="fieldarea">
+              <label id="labelfield">Cost Price: </label>
+              <input
+                id="inputfield"
+                placeholder="Cost Price"
+                type="number"
+                name="cp"
+                onChange={handleonchange}
+              />
+            </div>
 
-          <div className="fieldarea">
-            <label id="labelfield">Selling Price: </label>
-            <input
-              id="inputfield"
-              placeholder="Selling Price"
-              type="number"
-              name="sp"
-              onChange={handleonchange}
-            />
-          </div>
+            <div className="fieldarea">
+              <label id="labelfield">Selling Price: </label>
+              <input
+                id="inputfield"
+                placeholder="Selling Price"
+                type="number"
+                name="sp"
+                onChange={handleonchange}
+              />
+            </div>
 
-          <div className="fieldarea">
-            <label id="labelfield">Supplier: </label>
-            <input
-              id="inputfield"
-              placeholder="Supplier"
-              type="text"
-              name="supplier"
-              onChange={handleonchange}
-            />
+            <div className="fieldarea">
+              <label id="labelfield">Supplier: </label>
+              <input
+                id="inputfield"
+                placeholder="Supplier"
+                type="text"
+                name="supplier"
+                onChange={handleonchange}
+              />
+            </div>
+            <div className="fieldarea1">
+              <button className="submitField" onClick={SubmitButton}>
+                SUBMIT
+              </button>
+            </div>
           </div>
-          <div className="fieldarea1">
-            <button className="submitField" onClick={SubmitButton}>
-              SUBMIT
-            </button>
+        </form>
+        <div className="tablearea">
+          <div className="tableheading">
+            <h5>Current Stock</h5>
+            <span className="searchbar">
+              <p>Search:</p>
+              <input id="searchbox" />
+            </span>
           </div>
+          <table className="producttab">
+            <thead id="thead">
+              <th id="tcell">Barcode</th>
+              <th id="tcell">Product Name</th>
+              <th id="tcell">Category</th>
+              <th id="tcell">Stock</th>
+              <th id="tcell">Cost Price</th>
+              <th id="tcell">Selling Price</th>
+              <th id="tcell">Supplier</th>
+              <th id="tcell">Status</th>
+            </thead>
+            <tbody id="tbody">
+              {productList.map((itemm) => (
+                <tr id="trow">
+                  <td id="tbcell">{itemm.Barcode}</td>
+                  <td id="tbcell">{itemm.ProdName}</td>
+                  <td id="tbcell">{itemm.Categories}</td>
+                  <td id="tbcell">{itemm.Quantity}</td>
+                  <td id="tbcell">{itemm.Costprice}</td>
+                  <td id="tbcell">{itemm.SellingPrice}</td>
+                  <td id="tbcell">{itemm.Seller}</td>
+                  <td id="tbcell">{itemm.Status}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
         </div>
-      </form>
-      <div className="tablearea">
-        <div className="tableheading">
-          <h5>Current Stock</h5>
-          <span className="searchbar">
-            <p>Search:</p>
-            <input id="searchbox" />
-          </span>
-        </div>
-        <table className="producttab">
-          <thead id="thead">
-            <th id="tcell">Barcode</th>
-            <th id="tcell">Product Name</th>
-            <th id="tcell">Category</th>
-            <th id="tcell">Stock</th>
-            <th id="tcell">Cost Price</th>
-            <th id="tcell">Selling Price</th>
-            <th id="tcell">Supplier</th>
-            <th id="tcell">Status</th>
-          </thead>
-          <tbody id="tbody">
-            {productList.map((itemm) => (
-              <tr id="trow">
-                <td id="tbcell">{itemm.Barcode}</td>
-                <td id="tbcell">{itemm.ProdName}</td>
-                <td id="tbcell">{itemm.Categories}</td>
-                <td id="tbcell">{itemm.Quantity}</td>
-                <td id="tbcell">{itemm.Costprice}</td>
-                <td id="tbcell">{itemm.SellingPrice}</td>
-                <td id="tbcell">{itemm.Seller}</td>
-                <td id="tbcell">{itemm.Status}</td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
       </div>
     </div>
   );

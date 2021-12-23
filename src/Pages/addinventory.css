@@ -12,8 +12,11 @@
   background-color: rgb(255, 252, 252);
 }
 
+.container-body {
+  padding: 10px 0px 0px 0px;
+}
+
 .Topfield {
-  /* background-color: brown; */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -23,7 +26,6 @@
   font-size: 16px;
   font-family: "Public Sans", sans-serif;
   margin-right: 10px;
-  /* background-color: blue; */
   width: 150px;
   display: flex;
   justify-content: space-between;
@@ -35,7 +37,6 @@
   margin-bottom: 5px;
   width: 35%;
   justify-content: space-between;
-  /* background-color: aqua; */
 }
 
 .fieldarea1 {
@@ -58,6 +59,7 @@
 
 .submitField:hover {
   background-color: #8888;
+  color: white;
 }
 
 #inputfield {
@@ -78,7 +80,7 @@
 }
 
 .tableheading {
-  background-color: gray;
+  background-color: rgba(55, 82, 141, 0.733);
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -106,9 +108,12 @@
 
 #searchbox {
   margin-left: 3px;
-  padding: 5px;
+  padding: 5px 10px;
   border-radius: 3px;
+  font-size: 14px;
+  color: gray;
   border: none;
+  outline: none;
 }
 
 #tcell {
@@ -118,7 +123,7 @@
   font-weight: 500;
   color: white;
   border-left: 1px solid wheat;
-  background-color: rgb(36, 35, 35);
+  background-color: rgb(55, 82, 141);
 }
 
 #tbcell {
