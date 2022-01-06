@@ -15,8 +15,8 @@ const Addinventory = () => {
   const [productList, setProductList] = useState([]);
 
   useEffect(() => {
-    Axios.get("http://localhost:5000/getproduct").then((res) =>
-      setProductList(res.data)
+    Axios.get("https://inventory-systm-server.herokuapp.com/getproduct").then(
+      (res) => setProductList(res.data)
     );
   }, []);
 
@@ -33,7 +33,10 @@ const Addinventory = () => {
     };
 
     console.log(obj);
-    Axios.post("http://localhost:5000/newstock", obj).then(() => {
+    Axios.post(
+      "https://inventory-systm-server.herokuapp.com/newstock",
+      obj
+    ).then(() => {
       console.log("Success");
     });
   };
