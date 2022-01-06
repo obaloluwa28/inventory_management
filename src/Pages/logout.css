@@ -1,0 +1,173 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200&family=Public+Sans:wght@100;200;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Anton&family=Montserrat:wght@200&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.logoutcontainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+}
+
+#logintitle {
+  position: absolute;
+  font-size: 30px;
+  top: 30px;
+  font-weight: 500;
+  letter-spacing: 3px;
+  font-family: "Anton", sans-serif;
+  color: rgba(0, 0, 0, 0.705);
+}
+
+#loginform {
+  position: absolute;
+  min-width: 50%;
+  height: 500px;
+  max-height: 70%;
+  background-color: white;
+  box-shadow: rgb(41 41 41 / 35%) 0px 3px 8px;
+  transform: rotate(2deg);
+  /* border-radius: 10px; */
+}
+
+#loginformid {
+  position: absolute;
+  min-width: 50%;
+  height: 500px;
+  max-height: 70%;
+  background-color: white;
+  box-shadow: rgb(41 41 41 / 35%) 0px 3px 8px;
+  transform: rotate(-2deg);
+  /* border-radius: 10px; */
+}
+
+#loginformtop {
+  position: absolute;
+  min-width: 50%;
+  height: 500px;
+  max-height: 70%;
+  background-color: white;
+  box-shadow: rgb(41 41 41 / 35%) 0px 3px 8px;
+  background-color: white;
+  padding: 40px 20px 20px 20px;
+}
+
+#loginformtop p {
+  font-size: 30px;
+  font-weight: 700;
+  font-family: "Public Sans", sans-serif;
+  color: #888;
+  margin-bottom: 60px;
+}
+
+.emailfieldcontain,
+.passfieldcontain {
+  position: relative;
+}
+
+#loginicon {
+  color: rgba(136, 136, 136, 0.596);
+  font-size: 20px;
+  position: absolute;
+  margin-left: 5px;
+  top: 7px;
+}
+
+#emailfield,
+#passwfield {
+  padding: 8px 10px 8px 30px;
+  width: 60%;
+  margin-bottom: 15px;
+  font-size: 15px;
+  font-weight: 200;
+  font-family: "Public Sans", sans-serif;
+  outline: none;
+  color: #888;
+  border: 1px solid rgba(136, 136, 136, 0.29);
+  border-radius: 3px;
+  background-color: aliceblue;
+}
+
+.bottomcontain {
+  /* background-color: aqua; */
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-top: 30px;
+}
+
+.bottomcontain #logbut {
+  width: 130px;
+  padding: 9px 5px;
+  border-radius: 5px;
+  border: 1px solid rgba(136, 136, 136, 0.411);
+  font-size: 15px;
+  font-weight: 600;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  cursor: pointer;
+  background-color: rgb(55, 82, 141);
+  color: white;
+}
+
+.bottomcontain #logbut:hover {
+  background-color: rgb(96, 128, 196);
+}
+
+.bottomcontain #logfogpass {
+  font-size: 15px;
+  font-weight: 500;
+  font-family: "Public Sans", sans-serif;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.bottomcontain #logfogpass:hover {
+  color: rgb(96, 128, 196);
+}
+
+@media screen and (max-width: 690px) {
+  #logintitle {
+    display: none;
+  }
+
+  #loginform {
+    width: 85%;
+    min-height: 400px;
+    background-color: rgba(241, 149, 11, 0.945);
+    border-radius: 5px;
+  }
+
+  #loginformid {
+    width: 85%;
+    min-height: 400px;
+    background-color: rgba(201, 54, 181, 0.534);
+    border-radius: 5px;
+  }
+
+  #loginformtop {
+    width: 85%;
+    min-height: 400px;
+    background-color: rgb(255, 255, 255);
+  }
+
+  .bottomcontain #logbut {
+    width: 90px;
+    font-weight: 500;
+    padding: 7px 5px;
+  }
+
+  #emailfield,
+  #passwfield {
+    width: 80%;
+  }
+
+  .bottomcontain #logfogpass {
+    font-size: 13px;
+  }
+}

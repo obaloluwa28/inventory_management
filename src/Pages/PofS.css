@@ -1,2 +1,163 @@
-.posContain {
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200&family=Public+Sans:wght@100;200;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Anton&family=Montserrat:wght@200&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600;700&display=swap");
+
+._container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px 0px 0px 0px;
+  background-color: rgba(243, 238, 238, 0.907);
+}
+
+.poscontainer {
+  background-color: rgba(243, 238, 238, 0.907);
+  width: 90%;
+  height: calc(100vh - 55px);
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 0.7fr 1fr;
+  grid-template-areas:
+    "ColA ColB"
+    "ColC ColC";
+  row-gap: 8px;
+  column-gap: 8px;
+}
+
+#formfield {
+  grid-area: ColA;
+  background-color: white;
+  border-radius: 8px;
+  padding: 10px 0px;
+}
+
+#tablefield {
+  grid-area: ColB;
+  background-color: white;
+  border-radius: 8px;
+}
+
+#positemfield {
+  grid-area: ColC;
+  background-color: white;
+  border-radius: 8px;
+  padding: 10px;
+}
+
+#posfieldcontain {
+  width: 100%;
+  margin-top: 8px;
+  display: flex;
+  /* background-color: aqua; */
+}
+
+#posfieldcontain2 {
+  width: 100%;
+  margin-top: 35px;
+  display: flex;
+}
+
+.poslabel {
+  width: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-right: 5px;
+}
+
+.posinput {
+  padding: 5px 10px;
+  width: 50%;
+  outline: none;
+  font-family: "Public Sans", sans-serif;
+  border: 1px solid #8888;
+}
+
+.posinputdte {
+  padding: 5px 10px;
+  width: 30%;
+  outline: none;
+  border: 1px solid #8888;
+}
+
+.posbut {
+  font-size: 15px;
+  padding: 5px 10px;
+  font-family: "Public Sans", sans-serif;
+  margin-left: 140px;
+  width: 200px;
+  cursor: pointer;
+}
+
+#minicontain {
+  background-color: aqua;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  height: calc(100vh - 350px);
+}
+
+#minicontain div {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  height: 200px;
+  width: 80%;
+  overflow: auto;
+  background-color: brown;
+}
+
+#deleteicon {
+  font-size: 20px;
+  color: rgb(83, 81, 81);
+  cursor: pointer;
+}
+
+table.posproducttab {
+  overflow-y: auto;
+  table-layout: auto;
+  width: 90%;
+  max-height: 100%;
+  border-collapse: collapse;
+  /* border: 1px solid rgb(83, 81, 81); */
+}
+
+#bcell {
+  /* border: 1px solid #888; */
+  padding: 4px;
+  font-family: "Courier New", Courier, monospace;
+  background-color: white;
+}
+
+#postcell {
+  font-size: 16px;
+  font-family: "Courier New", Courier, monospace;
+  padding: 8px 10px;
+  font-weight: bold;
+  color: black;
+  /* border-bottom: 1px solid rgba(206, 206, 206, 0.24); */
+  background-color: rgba(243, 238, 238, 0.907);
+}
+
+#ttrow {
+  border-bottom: 1px solid rgba(206, 206, 206, 0.24);
+  height: 20px;
+}
+
+.posprintbut {
+  font-size: 15px;
+  padding: 5px 10px;
+  font-family: "Public Sans", sans-serif;
+  width: 150px;
+  cursor: pointer;
+  margin-top: 5px;
+  /* position: absolute; */
+  /* bottom: 10px; */
+}
+
+.buttombuttbox {
+  background-color: aqua;
+  position: relative;
+  height: 80px;
+  display: flex;
 }

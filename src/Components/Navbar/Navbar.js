@@ -35,13 +35,13 @@ const Navbar = () => {
       <span className={togglestate ? "midContainer" : "midContainerinv"}>
         <ul id="navList">
           <li>
-            <Link to="/" id="linkdiv">
+            <Link to="/dashboard" id="linkdiv">
               <MdMonitor id="icon" />
               <p>Dashboard</p>
             </Link>
           </li>
           <li>
-            <Link to="/addproduct" id="linkdiv">
+            <Link to="/categories" id="linkdiv">
               <MdCategory id="icon" />
               <p>Categories</p>
             </Link>
@@ -53,7 +53,7 @@ const Navbar = () => {
             </Link>
           </li>
           <li>
-            <Link to="/addproduct" id="linkdiv">
+            <Link to="/orders" id="linkdiv">
               <BsPeopleFill id="icon" />
               <p>Orders</p>
             </Link>
@@ -74,12 +74,16 @@ const Navbar = () => {
 
         <ul id={togglestat ? "navList1" : "navListinv"}>
           <li>
-            <AiOutlineSetting id="icon" />
-            <p>Settings</p>
+            <Link to="/settings" id="link_div">
+              <AiOutlineSetting id="icon" />
+              <p>Settings</p>
+            </Link>
           </li>
           <li>
-            <AiOutlineLogout id="icon" />
-            <p>Logout</p>
+            <Link to="/" id="link_div">
+              <AiOutlineLogout id="icon" />
+              <p>Logout</p>
+            </Link>
           </li>
         </ul>
       </span>

@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import "./addinventory.css";
 import Axios from "axios";
 import Navbar from "../Components/Navbar/Navbar";
+import Footer from "../Components/Footer/Footer";
 
 const Addinventory = () => {
   const [barcode, SetBarcode] = useState("");
@@ -202,6 +203,7 @@ const Addinventory = () => {
           </table>
         </div>
       </div>
+      <Footer />
     </div>
   );
 };
